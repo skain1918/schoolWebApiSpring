@@ -21,6 +21,7 @@
         <version>3.5.0</version>
         <relativePath/>
     </parent>
+
     <dependencies>    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -45,16 +46,20 @@
             <artifactId>mapstruct-processor</artifactId>
             <version>1.6.3</version>
         </dependency>    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-mapstruct-binding -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok-mapstruct-binding</artifactId>
-            <version>0.2.0</version>
-        </dependency>    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.38</version>
-        </dependency>    <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok-mapstruct-binding</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
@@ -75,7 +80,19 @@
                 <configuration>
                     <source>9</source>
                     <target>9
-                    </target>                <!--                    <annotationProcessorPaths>-->                <!--                        <path>-->                <!--                            <groupId>org.projectlombok</groupId>-->                <!--                            <artifactId>lombok</artifactId>-->                <!--                            <version>1.18.38</version>-->                <!--                        </path>-->                <!--                        <path>-->                <!--                            <groupId>org.mapstruct</groupId>-->                <!--                            <artifactId>mapstruct-processor</artifactId>-->                <!--                            <version>1.6.3.Final</version>-->                <!--                        </path>-->                <!--                    </annotationProcessorPaths>-->
+                    </target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>1.18.38</version>
+                        </path>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>1.6.3</version>
+                        </path>
+                    </annotationProcessorPaths>
                     <compilerArgs>
                         <arg>-Amapstruct.suppressGeneratorTimestamp=true</arg>
                         <arg>-Amapstruct.defaultComponentModel=spring</arg>

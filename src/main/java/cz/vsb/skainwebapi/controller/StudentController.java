@@ -30,4 +30,8 @@ public class StudentController {
     public StudentDto editStudent(@RequestBody StudentDto editedStudent, @PathVariable int studentId){
         return studentService.editStudent(editedStudent, studentId);
     }
+    @DeleteMapping("/students/{studentId}")
+    public StudentDto deleteStudent (@PathVariable int studentId){
+        return studentService.deleteStudent(studentId);
+    }
 }
